@@ -1,0 +1,172 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* Line clamp utilities for text truncation */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* Prevent layout shift from scrollbar */
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+/* Consistent scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+/* High Contrast Mode Styles */
+.high-contrast {
+  /* Base colors */
+  --bg-primary: #000000;
+  --bg-secondary: #FFFFFF;
+  --text-primary: #FFFFFF;
+  --text-secondary: #000000;
+  --accent-color: #FFFF00;
+  --border-color: #FFFFFF;
+}
+
+/* Background colors */
+.high-contrast .bg-sky-50,
+.high-contrast .bg-sky-700 {
+  background-color: var(--bg-primary) !important;
+}
+
+.high-contrast .bg-white {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Text colors */
+.high-contrast .text-sky-700,
+.high-contrast .text-neutral-400,
+.high-contrast .text-neutral-800,
+.high-contrast .text-gray-700 {
+  color: var(--text-primary) !important;
+}
+
+/* Borders */
+.high-contrast .border,
+.high-contrast .border-neutral-200,
+.high-contrast .border-slate-200 {
+  border-color: var(--border-color) !important;
+  border-width: 2px !important;
+}
+
+.high-contrast .border-dashed {
+  border-style: dashed !important;
+  border-color: var(--border-color) !important;
+  border-width: 2px !important;
+}
+
+/* Tables and grids */
+.high-contrast .bg-sky-50 {
+  background-color: var(--bg-primary) !important;
+}
+
+.high-contrast table th,
+.high-contrast table td,
+.high-contrast .grid {
+  border-color: var(--border-color) !important;
+}
+
+/* Buttons and interactive elements */
+.high-contrast button:not(.active) {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border: 2px solid var(--border-color) !important;
+}
+
+.high-contrast button.active,
+.high-contrast button:hover {
+  background-color: var(--text-primary) !important;
+  color: var(--bg-primary) !important;
+}
+
+/* Icons */
+.high-contrast [class*="icon"] {
+  color: var(--text-primary) !important;
+}
+
+/* Shadows */
+.high-contrast .shadow-md {
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Font size slider styles */
+input[type="range"] {
+  height: 6px;
+  background: transparent;
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #0284c7;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #0284c7;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.high-contrast input[type="range"]::-webkit-slider-thumb {
+  background: var(--text-primary) !important;
+  border: 2px solid var(--border-color) !important;
+}
+
+.high-contrast input[type="range"] {
+  background: var(--text-primary) !important;
+}
