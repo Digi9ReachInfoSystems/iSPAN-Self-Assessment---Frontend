@@ -18,3 +18,13 @@ If you want to learn more about creating good readme files then refer the follow
 - [ASP.NET Core](https://github.com/aspnet/Home)
 - [Visual Studio Code](https://github.com/Microsoft/vscode)
 - [Chakra Core](https://github.com/Microsoft/ChakraCore)
+
+# Environment variables for iSPAN Stress Frontend - Local
+ 
+# Frontend URL
+# NEXT_PUBLIC_API_URL=http://localhost:5000/graphql
+NEXT_PUBLIC_API_URL=http://192.168.1.23:5000/graphql
+NEXT_PUBLIC_APP_NAME=iSPAN STRESS
+NEXT_PUBLIC_APP_VERSION=1.0.0
+NEXT_PUBLIC_APP_DESCRIPTION=iSPAN STRESS Application
+NEXT_PUBLIC_APP_AUTHOR=iSPAN Technologies
